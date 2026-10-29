@@ -18,3 +18,10 @@ def get_student(student_id: int):
     #if student is None:
         #raise HTTPException(status_code=404, detail="Student Not Found")
     return student
+ @app.post("/create-students")
+def create_student(name:str,course:str,email:alnum):
+   return{
+        "name":name,
+        "course": course,
+        "email": email
+   }
